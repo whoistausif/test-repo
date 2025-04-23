@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> Portfolio of Tausif </title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9/lib/typed.min.js"></script>
+    <script src="https://kit.fontawesome.com/c7273ab488.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Upper Header -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#header"> <img src="./image/logo2.png" class="logo"></a> 
+                <ul id="sidemenu">
+                    <li><a href="#header">Home </a> </li>
+                    <li><a href="#about">About</a> </li>
+                    <li><a href="#services">Services</a> </li>
+                    <li><a href="#portfolio">Work</a> </li>
+                    <li><a href="#contact">Contact</a> </li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul> 
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <!-- Bottom context -->
+
+            <div class="header-text">
+                <span class="span"></span>
+                <h1>Hey, I'm <span>Mohammad Tausif</span></h1>
+                <p>This is my official portfolio Website to Showes all Details and work of Mine</p>
+                <a href="./image/my-cv.pdf" download class="btn btn2">Download Cv</a>
+                
+            </div>
+          
+        </div>
+    </div>
+
+    <!-- -------------------About section--------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./image/user1.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> About <span class="me"> Me</span> </h1>
+                    <p> Hi, I'm a Computer Science student at Shri Shankaracharya Professional University and a passionate full-stack web developer. I have experience in HTML, CSS, JavaScript, React, Node.js, and MongoDB, and have been doing freelancing alongside my studies. I specialize in developing responsive and user-friendly websites that offer an intuitive user experience. I enjoy collaborating with clients and turning their ideas into reality. In my free time, I like to explore new technologies and continuously learn new things. If you need a skilled web developer committed to delivering high-quality work, don't hesitate to contact me. I'm excited to help you achieve your project goals.</p>
+                    <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')"> Skills </p>
+                            <p class="tab-links" onclick="opentab('experience')"> Experience </p>
+                            <p class="tab-links" onclick="opentab('education')"> Education </p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                    
+                        <ul>
+                            <li>
+                                <span> skills name </span> <br>description of experience<br>
+                                
+                            </li>
+                            <li>
+                                <span> skills name </span> <br>description of experience<br>
+                            </li>
+                            <li>
+                                <span> skills name </span> <br>description of experience<br>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                    
+                        <ul>
+                            <li>
+                                <span> experience name </span> <br>description of experience<br>
+                                
+                            </li>
+                            <li>
+                                <span> experience name </span> <br>description of experience<br>
+                            </li>
+                            <li>
+                                <span> experience name </span> <br>description of experience<br>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                    
+                        <ul>
+                            <li>
+                                <span> experience name </span> <br>description of experience<br>
+                                
+                            </li>
+                            <li>
+                                <span> experience name </span> <br>description of experience<br>
+                            </li>
+                            <li>
+                                <span> experience name </span> <br>description of experience<br>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- -------------------- Services-------------------------------- -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My <span class="me"> Services </span></h1>
+            <div class="services-list">
+                <div><i class="fa-solid fa-code"></i>                      <!---fontawesome.com --> 
+                    <h2>Web Designer</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, molestias!</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div><i class="fa-solid fa-code"></i>                      <!---fontawesome.com --> 
+                    <h2>Web Designer</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, molestias!</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div><i class="fa-solid fa-code"></i>                       <!---fontawesome.com --> 
+                    <h2>Web Designer</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, molestias!</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- --------------------Portfolio code ---------------------- -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My <span class="me">Work</span></h1>
+            
+            <div class="work-list">
+                <div class="work">
+                    <img src="./image/work-1.png" alt="work">
+                    <div class="layer">
+                        <h3> Social Media App</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, optio?</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="./image/work-2.png" alt="work">
+                    <div class="layer">
+                        <h3> Social Media App</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, optio?</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="./image/work-3.png" alt="work">
+                    <div class="layer">
+                        <h3> Social Media App</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, optio?</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                
+
+            </div>
+            <a href="#" class="btn">See More </a>
+        </div>
+    </div>
+
+<!-- --------------------contact code------------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact <span class="me">Me</span></h1>
+                <p><i class="fa-solid fa-envelope"></i>mohdtausif641@gmail.com</p>
+                <p> <i class="fa-solid fa-phone"></i>+917909823469</p>
+                <div class="social-icon">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="mailto:mohdtausif641@gmail.com?subject=Hiring inquiry&body=Hi, I want to hire you ASAP!" class="btn btn2">Hire me </a>
+                <!-- <a href="./image/my-cv.pdf" download class="btn btn2">Download Cv</a> -->
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name"  placeholder="Your Name " required>
+                    <input type="email" name="Email" placeholder="Your email " required>
+                    <textarea name="Message"rows="6" placeholder="Your message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+            
+        </div>
+    </div>
+    <div class="copyright">
+        <p> <a href=""> Created By | <i class="fa-solid fa-heart"></i> <span> Mohammad Tausif</span> </a>  </p>
+    </div>
+</div>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxC64B9K1NReZcN72vJIfowM5iUl1VzxLS2vwJ8RjEyd62wR38j7WIF1hpPugUeSWlUQQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg =  document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => { 
+            msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+                           msg.innerHTML = ""
+                           },5000)
+                           form.reset()
+                       })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+
+<script src="./script.js"></script>
+</body> 
+</html>
