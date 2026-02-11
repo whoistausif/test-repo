@@ -1,16 +1,15 @@
 <div align="center">
 
-# 🚀 WebScanPro  
-### Web Application Security Testing Tool  
+# 🚀 WEBSANPRO – WEB APPLICATION SECURITY TESTING TOOL 🚀
 
 </div>
 
 ---
 
-# 📌 Milestone 1  
+# 📌 MILESTONE 1  
 ## Project Setup & Target Scanning Module  
 
-This milestone covers the initial setup of the project and development of a basic scanning module.
+This milestone covers the basic setup of the project and development of the first scanning module.
 
 ---
 
@@ -18,14 +17,14 @@ This milestone covers the initial setup of the project and development of a basi
 
 ## 🔸 About the Project  
 
-WebScanPro is a tool that will test web applications for common security problems such as:
+WebScanPro is a tool that checks web applications for common security problems like:
 
 - SQL Injection  
 - Cross-Site Scripting (XSS)  
-- Weak Authentication  
+- Weak login systems  
 - Other common web security issues  
 
-In Week 1, the goal was to set up the environment and understand how the vulnerable application works.
+In Week 1, the goal was to set up everything and understand how the vulnerable application works.
 
 ---
 
@@ -51,25 +50,25 @@ In Week 1, the goal was to set up the environment and understand how the vulnera
 - Updated configuration settings  
 - Initialized the database  
 
-After this, DVWA was successfully running in the browser.
+After this, DVWA was running successfully in the browser.
 
 ---
 
 ## 🔸 Explored Vulnerability Modules  
 
-I explored different DVWA modules to understand how they work:
+I explored the following modules:
 
-- **Brute Force Module** – Demonstrates weak login system  
-- **SQL Injection Module** – Shows database-related vulnerability  
-- **XSS Module** – Shows how malicious scripts can run in browser  
+- **Brute Force Module** – Shows weak login system  
+- **SQL Injection Module** – Shows database vulnerability  
+- **XSS Module** – Shows how scripts can run in browser  
 
-I only explored the structure and inputs. No full exploitation was performed.
+I only explored the structure and inputs.
 
 ---
 
 ## 🔸 Week 1 Result  
 
-✔ DVWA successfully installed  
+✔ DVWA installed successfully  
 ✔ Vulnerability pages identified  
 ✔ Input fields located  
 ✔ Environment ready for automation  
@@ -97,7 +96,7 @@ The goal of Week 2 was to create a Python scanner that automatically finds:
 - Form actions  
 - HTTP methods  
 
-This information will be used later for automated vulnerability testing.
+This information will be used later for automated testing.
 
 ---
 
@@ -113,7 +112,7 @@ This information will be used later for automated vulnerability testing.
 
 ## 🔸 About scanner.py  
 
-I created a Python script named `scanner.py`.
+I created a Python script called `scanner.py`.
 
 This script:
 
@@ -143,7 +142,7 @@ It only collects useful information.
 
 ---
 
-## 🔸 Output Files Generated  
+## 🔸 Output Files  
 
 ### 📄 output.json  
 Contains structured data:
@@ -157,7 +156,7 @@ Contains structured data:
 ---
 
 ### 📄 output.txt  
-Human-readable scan result  
+Readable scan results  
 
 ![Output TXT](Week2/output_txt.png)
 
@@ -165,14 +164,14 @@ Human-readable scan result
 
 ## 🔸 Scan Results  
 
-The scanner detected the DVWA login form and found:
+The scanner found the DVWA login form and extracted:
 
 - username  
 - password  
-- user_token (hidden field)  
+- user_token  
 - submit button  
 
-Since DVWA requires login, only the login page was scanned.
+Only the login page was scanned because internal pages need authentication.
 
 ---
 
@@ -186,20 +185,18 @@ Since DVWA requires login, only the login page was scanned.
 ## 🔸 Limitations  
 
 - Scanner does not login yet  
-- Internal pages are not accessible  
+- Internal pages cannot be scanned  
 - Session handling will be added later  
 
 ---
 
 # ✅ Milestone 1 Summary  
 
-In Milestone 1:
+✔ Local testing environment set up  
+✔ DVWA configured successfully  
+✔ Vulnerability modules explored  
+✔ Python scanner developed  
+✔ Forms and input fields extracted  
+✔ Structured output files generated  
 
-✔ Local testing environment was set up  
-✔ DVWA was configured successfully  
-✔ Vulnerability modules were explored  
-✔ A working Python scanner was developed  
-✔ Forms and input fields were extracted  
-✔ Structured output files were generated  
-
-Milestone 1 builds the foundation for developing a complete automated web security testing tool.
+Milestone 1 builds the base for developing a complete web security testing tool.
