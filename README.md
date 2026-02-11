@@ -1,249 +1,269 @@
-# WebScanPro  
-## Web Application Security Testing Tool  
-
-**Branch:** Mohammad-Tausif-Branch  
-**Batch:** 13  
+# 🚀 WebScanPro  
+## 🔐 Web Application Security Testing Tool  
 
 ---
 
 # 📌 Milestone 1  
-## Project Initialization, Setup & Target Scanning Module  
-
-Milestone 1 covers the foundation of the WebScanPro project, including environment setup, application exploration, and development of the Target Scanning Module.
-
----
-
-# 🔹 PART A – Week 1  
-## Project Initialization and Environment Setup  
-
-### 1. Introduction  
-
-WebScanPro is a web application security testing tool designed to identify common vulnerabilities such as:
-
-- SQL Injection  
-- Cross-Site Scripting (XSS)  
-- Broken Authentication  
-- Other OWASP Top 10 issues  
-
-The objective of Week 1 was to set up a vulnerable testing environment and explore the target application structure. This forms the foundation for developing automated vulnerability scanning modules.
+## Week 1 – Project Initialization & Setup  
+## Week 2 – Target Scanning Module  
 
 ---
 
-### 2. Project Objectives  
+# 🔹 Week 1 - Project Initialization and Setup  
 
-- Understand OWASP Top 10 vulnerabilities  
-- Develop automated security testing modules  
-- Perform manual and automated testing  
-- Generate structured vulnerability reports  
-- Document findings with evidence  
+## 1️⃣ Introduction  
 
-For Week 1, the focus was limited to setup and exploration.
+WebScanPro is a web application security testing tool designed to identify common vulnerabilities in web applications, such as SQL Injection, Cross-Site Scripting (XSS), broken authentication, and other OWASP Top 10 issues.  
 
----
+The purpose of this project is to develop a structured and automated approach to web application security testing. During Week 1, the focus was on understanding the project scope, setting up a vulnerable test environment, and exploring the target application to identify potential testing surfaces.  
 
-### 3. Tools & Technologies Used  
-
-- **XAMPP** – Local server (Apache & MySQL)  
-- **DVWA (Damn Vulnerable Web Application)** – Target vulnerable app  
-- **PHP & MySQL** – Backend technologies  
-- **Web Browser** – Application interaction  
-- **Git & GitHub** – Version control  
+This initial phase forms the foundation for developing automated vulnerability scanning modules in later stages of the project.
 
 ---
 
-### 4. Environment Setup  
+## 2️⃣ Project Objectives  
 
-#### XAMPP Setup
-- Installed on Windows system  
-- Apache and MySQL services started successfully  
+The primary objectives of the WebScanPro project are:
 
-#### DVWA Configuration
-- DVWA placed inside `htdocs`  
-- Created MySQL database named `dvwa`  
-- Updated configuration file with correct credentials  
-- Enabled required PHP settings  
-- Database initialized successfully  
+- To understand common web application vulnerabilities as defined by OWASP Top 10  
+- To develop modules for detecting different types of security vulnerabilities  
+- To perform both manual and automated security testing  
+- To generate structured security reports with mitigation suggestions  
+- To prepare detailed documentation and presentation of findings and results  
 
-Application was accessed successfully using default credentials.
+For Week 1, the objective was limited to project initialization, environment setup, and application exploration.
 
 ---
 
-### 5. Application Structure Exploration  
+## 3️⃣ Project Planning  
 
-The following DVWA modules were explored:
+The project was planned using a week-wise milestone-based approach. Each week focuses on a specific module of the WebScanPro tool.
 
-#### 🔹 Brute Force Module
-Demonstrates weak authentication and lack of protection mechanisms.
+### Week 1 Plan:
+- Define project goals and scope  
+- Select tools and technologies  
+- Set up a vulnerable web application locally  
+- Explore application structure and functionality  
 
-#### 🔹 SQL Injection Module
-Shows how improper input validation leads to database vulnerabilities.
-
-#### 🔹 Cross-Site Scripting (XSS) Module
-Demonstrates reflected XSS due to improper output sanitization.
-
-Exploration was limited to understanding structure without exploitation.
+This phased planning ensures a clear progression from understanding vulnerabilities to automating their detection and reporting.
 
 ---
 
-### 6. Results & Observations  
+## 4️⃣ Tools and Technology Selection  
 
-**Results**
-- DVWA successfully deployed  
-- Vulnerability modules identified  
-- Input-based testing surfaces documented  
+The following tools and technologies were selected for the project:
 
-**Observations**
-- Low security level lacks protections  
-- Vulnerabilities mainly due to improper input validation  
-- DVWA is suitable for automated scanning development  
+- **XAMPP** – Used as a local server environment (Apache & MySQL)  
+- **DVWA (Damn Vulnerable Web Application)** – Used as an intentionally vulnerable application for testing  
+- **PHP & MySQL** – Backend technologies used by DVWA  
+- **Web Browser** – For accessing and interacting with the application  
+- **Git & GitHub** – For version control and documentation tracking  
 
----
-
-### 7. Week 1 Screenshots  
-
-**XAMPP Control Panel**
-![XAMPP](Week1/xampp_control_panel.png)
-
-**DVWA Dashboard**
-![DVWA Dashboard](Week1/dvwa_dashboard.png)
-
-**Brute Force Module**
-![Brute Force](Week1/bruteforce.png)
-
-**SQL Injection Module**
-![SQL Injection](Week1/sql_injection.png)
-
-**XSS Module**
-![XSS](Week1/xss_reflected.png)
+These tools were chosen because they are widely used, open-source, and suitable for learning and testing web application security concepts.
 
 ---
 
-# 🔹 PART B – Week 2  
-## Target Scanning Module Implementation  
+## 5️⃣ Environment Setup (Findings – Part 1)  
 
-### 1. Objective  
+### XAMPP Setup  
+XAMPP was installed on a Windows system to provide a local testing environment. Apache and MySQL services were successfully started to support the DVWA application.
 
-To develop a Python-based target scanner that automatically identifies:
+### DVWA Configuration  
+The DVWA application was downloaded and placed inside the htdocs directory of XAMPP. A dedicated MySQL database named dvwa was created using phpMyAdmin. Configuration files were updated with correct database credentials, and required PHP settings were enabled.
 
-- Forms  
-- Input fields  
-- Form actions  
-- HTTP methods  
+### Successful Deployment  
+The DVWA database was initialized using the setup interface, and the application was accessed successfully via the browser. Login using default credentials confirmed that the setup was completed correctly.
 
-This prepares metadata for automated vulnerability testing.
-
----
-
-### 2. Technologies Used  
-
-- **Python** – Core implementation  
-- **Requests** – Sending HTTP requests  
-- **BeautifulSoup** – Parsing HTML  
-- **DVWA** – Target application  
-- **XAMPP** – Local server  
+This step validated that the testing environment was ready for further security analysis.
 
 ---
 
-### 3. Scanner Description  
+## 6️⃣ Application Structure Exploration  
 
-A Python script named `scanner.py` was developed.
+After successful deployment, the structure of the DVWA application was explored to understand its components and vulnerability modules.
 
-The scanner:
+### 🔹 Brute Force Module  
+This module contains a login interface designed to demonstrate weak authentication mechanisms. It represents scenarios where applications lack proper protections such as rate limiting and account lockout.
 
-- Starts from the DVWA base URL  
-- Sends HTTP requests  
+### 🔹 SQL Injection Module  
+The SQL Injection module provides input fields that interact directly with backend database queries. It highlights how improper input handling can lead to database-related vulnerabilities.
+
+### 🔹 Cross-Site Scripting (XSS) Module  
+The Reflected XSS module reflects user input back to the browser. This module demonstrates how malicious scripts can be executed if user input is not properly sanitized.
+
+The exploration was limited to understanding the structure and inputs without performing exploitation.
+
+---
+
+## 7️⃣ Results and Observations  
+
+### Results
+- DVWA was successfully installed and configured on a local server  
+- Multiple vulnerability modules were identified and accessed  
+- Input-based testing surfaces were clearly documented  
+
+### Observations
+- The application intentionally lacks security controls at low security levels  
+- Most vulnerabilities arise due to improper input validation  
+- DVWA provides a suitable environment for mapping vulnerabilities to automated scanning logic  
+
+These observations will guide the development of WebScanPro’s automated testing modules.
+
+---
+
+## 8️⃣ Screenshots and Evidence  
+
+Screenshots were captured to provide visual evidence of the work performed.
+
+**XAMPP Control Panel showing running services**
+
+
+**DVWA home dashboard**
+
+
+**Brute Force module interface**
+
+
+**SQL Injection module interface**
+
+
+**XSS (Reflected) module interface**
+
+
+---
+
+## 9️⃣ Conclusion (Week 1 Summary)  
+
+Week 1 successfully completed the project initialization phase. The project goals and plan were defined, tools were selected, and DVWA was configured as a testing platform. The application structure and vulnerability modules were explored, and findings were documented with screenshots.
+
+---
+
+# 🔹 Week 2 – Target Scanning Module  
+
+## 1️⃣ Objective of Week 2  
+
+The objective of Week 2 was to develop a target scanning module that can automatically analyze a web application and identify attack entry points such as forms and input fields.
+
+This module prepares the groundwork for automated vulnerability testing in later stages.
+
+---
+
+## 2️⃣ Tools & Technologies Used  
+
+- **Python** – For implementing the scanner logic  
+- **Requests Library** – To send HTTP requests to the target application  
+- **BeautifulSoup** – To parse HTML and extract interactive elements  
+- **DVWA (Damn Vulnerable Web Application)** – Target application  
+- **XAMPP** – Local server environment  
+- **Git & GitHub** – Version control and submission  
+
+---
+
+## 3️⃣ Description of the Target Scanner  
+
+The scanner is a Python-based crawler that starts from a target URL and performs the following tasks:
+
+- Sends HTTP requests to the target web application  
 - Parses HTML responses  
-- Extracts `<form>` elements  
-- Extracts input fields (name & type)  
-- Stores structured output  
-- Recursively crawls internal links  
+- Identifies web forms and input fields  
+- Extracts metadata required for automated testing  
 
-This module performs discovery only and does not execute attacks.
+This scanner does not perform attacks; it only discovers potential entry points.
 
 ---
 
-### 4. Target Scanning Process  
+## 4️⃣ Scanner Implementation  
 
-1. Scanner starts from `http://localhost/dvwa/`  
-2. HTTP request sent to retrieve page content  
-3. HTML parsed using BeautifulSoup  
-4. Forms and input fields extracted  
-5. Data saved in structured format  
+A Python script named `scanner.py` was developed.  
+
+It uses the BeautifulSoup library to analyze the HTML structure of the DVWA login page.
+
+Key functionalities:
+
+- Detects `<form>` elements  
+- Extracts form attributes (action, method)  
+- Extracts all `<input>` fields including:
+  - Text inputs  
+  - Password fields  
+  - Submit buttons  
+  - Hidden CSRF tokens  
 
 ---
 
-### 5. Output Generated  
+## 5️⃣ Target Scanning Process (Step-by-Step)  
 
-#### output.json
-- Structured scan results  
-- Contains:
+1. The scanner starts from the DVWA base URL (http://localhost/dvwa/)  
+2. An HTTP request is sent to retrieve the page content  
+3. The HTML response is parsed using BeautifulSoup  
+4. Forms and input fields are extracted from the page  
+5. Extracted data is structured and saved for later testing  
+
+---
+
+## 6️⃣ Output Generated  
+
+### 6.1 output.json  
+
+- Contains structured scan results  
+- Stores:
   - Page URL  
   - Form action  
   - HTTP method  
   - Input field names and types  
+- Used for automation in future testing modules  
 
-![Output JSON](Week2/output_json.png)
 
----
-
-#### output.txt
-- Human-readable scan results  
-- Lists discovered forms and input fields  
-
-![Output TXT](Week2/output_txt.png)
 
 ---
 
-### 6. Scan Result Analysis  
+### 6.2 output.txt  
 
-The scanner successfully detected the DVWA login form and extracted:
+- Human-readable version of scan results  
+- Clearly lists discovered forms and input fields  
 
-- `username`
-- `password`
-- `user_token` (hidden CSRF token)
-- `submit` button  
 
-Internal pages require authentication; therefore, only the login page was scanned at this stage.
 
 ---
 
-### 7. Execution & Verification  
+## 7️⃣ Scan Result Analysis  
 
-Scanner executed successfully without errors.
+The scanner successfully detected the DVWA login form and extracted the following input fields:
 
-![Scanner Run](Week2/scanner_run.png)
+- username  
+- password  
+- user_token (hidden CSRF token)  
+- submit button  
 
-![Python Version](Week2/py_version.png)
-
----
-
-### 8. Limitations  
-
-- Works in unauthenticated mode  
-- Cannot access internal DVWA pages  
-- Session handling will be implemented in future milestones  
+DVWA internal pages require authentication; therefore, only the login page was scanned at this stage, which is expected behavior.
 
 ---
 
-# ✅ Milestone 1 Outcome  
+## 8️⃣ Execution & Verification  
 
-By the end of Milestone 1:
+The scanner was executed successfully using the Python launcher.  
+The execution generated output files without errors.
 
-- Vulnerable test environment successfully configured  
-- Application structure explored and documented  
-- Attack surfaces identified  
-- Functional target scanning module implemented  
-- Structured metadata generated for automated testing  
 
-Milestone 1 establishes the technical foundation for upcoming modules such as:
 
-- SQL Injection Automation  
-- XSS Testing  
-- Authentication Testing  
-- Report Generation  
 
 ---
 
-# 🚀 Next Phase  
+## 9️⃣ Limitations  
 
-Milestone 2 will focus on implementing automated SQL Injection and vulnerability detection logic using the extracted metadata.
+- The scanner currently works in an unauthenticated mode  
+- Internal DVWA pages are not accessible without login  
+- Advanced crawling with session handling will be implemented in future phases  
+
+---
+
+## 🔟 Outcome of Week 2  
+
+- A functional target scanning module was implemented  
+- Entry points such as forms and input fields were successfully identified  
+- Extracted metadata is ready to be used in Week 3: Automated SQL Injection Module  
+
+---
+
+## 1️⃣1️⃣ Conclusion  
+
+Week 2 successfully established the foundation for automated security testing by implementing a scanner that identifies and records attack surfaces within the target web application.
