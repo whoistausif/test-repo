@@ -1,202 +1,182 @@
 <div align="center">
 
-# 🚀 WEBSANPRO – WEB APPLICATION SECURITY TESTING TOOL 🚀
+# 🚀 WEBCANPRO – WEB APPLICATION SECURITY TESTING TOOL 🚀  
+### 🔐 BATCH 13 | CAPSTONE PROJECT  
+
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
+![Security](https://img.shields.io/badge/Focus-Web%20Security-red?style=for-the-badge)
+![Status](https://img.shields.io/badge/Milestone-1%20Completed-success?style=for-the-badge)
 
 </div>
 
 ---
 
 # 📌 MILESTONE 1  
-## Project Setup & Target Scanning Module  
+## ⚙️ Project Setup & Target Scanning Module  
 
-This milestone covers the basic setup of the project and development of the first scanning module.
-
----
-
-# 🔹 Week 1 – Project Initialization & Setup  
-
-## 🔸 About the Project  
-
-WebScanPro is a tool that checks web applications for common security problems like:
-
-- SQL Injection  
-- Cross-Site Scripting (XSS)  
-- Weak login systems  
-- Other common web security issues  
-
-In Week 1, the goal was to set up everything and understand how the vulnerable application works.
+This milestone includes environment setup, manual vulnerability testing, and development of the first scanning module.
 
 ---
 
-## 🔸 Tools Used  
+# 🛠️ WEEK 1 – PROJECT INITIALIZATION & SETUP  
 
-- XAMPP (Local Server – Apache & MySQL)  
-- DVWA (Damn Vulnerable Web Application)  
-- PHP & MySQL  
-- Web Browser  
-- Git & GitHub  
+## 🔍 About the Project  
 
----
+WebScanPro is a security tool that checks web applications for common problems like:
 
-## 🔸 What I Did in Week 1  
+- 💉 SQL Injection  
+- ⚡ Cross-Site Scripting (XSS)  
+- 🔐 Weak Login Systems  
+- 🛡️ Other common web security issues  
 
-### 1️⃣ Installed and Configured Environment  
-
-- Installed XAMPP  
-- Started Apache and MySQL  
-- Downloaded DVWA  
-- Placed DVWA inside `htdocs`  
-- Created a database named `dvwa`  
-- Updated configuration settings  
-- Initialized the database  
-
-After this, DVWA was running successfully in the browser.
+The goal of Week 1 was to prepare the environment and understand how the vulnerable application works.
 
 ---
 
-## 🔸 Explored Vulnerability Modules  
+## 🧰 Tools Used  
 
-I explored the following modules:
-
-- **Brute Force Module** – Shows weak login system  
-- **SQL Injection Module** – Shows database vulnerability  
-- **XSS Module** – Shows how scripts can run in browser  
-
-I only explored the structure and inputs.
+- 🖥️ XAMPP (Apache & MySQL)  
+- 🌐 DVWA (Damn Vulnerable Web Application)  
+- 🗄️ PHP & MySQL  
+- 🌍 Web Browser  
+- 🗂️ Git & GitHub  
 
 ---
 
-## 🔸 Week 1 Result  
+## ⚙️ Environment Setup  
 
-✔ DVWA installed successfully  
-✔ Vulnerability pages identified  
-✔ Input fields located  
-✔ Environment ready for automation  
+✔ Installed XAMPP  
+✔ Started Apache & MySQL  
+✔ Installed DVWA  
+✔ Created `dvwa` database  
+✔ Configured files  
+✔ Successfully launched application  
+
+---
+
+## 🧪 Manual SQL Injection Testing  
+
+During exploration, I manually tested SQL Injection using:
+```
+' OR '1'='1
+```
+
+This was done to check how the application handles unsafe input.
+
+### 💉 Manual SQL Injection Screenshot
+![Manual SQL Injection Test](Week-1/screenshots/manual-sql-injection-test.png)
 
 ---
 
 ## 📸 Week 1 Screenshots  
 
-![XAMPP](Week1/xampp_control_panel.png)  
-![DVWA Dashboard](Week1/dvwa_dashboard.png)  
-![Brute Force](Week1/bruteforce.png)  
-![SQL Injection](Week1/sql_injection.png)  
-![XSS](Week1/xss_reflected.png)  
+### 🖥️ XAMPP Running
+![XAMPP Running](Week-1/screenshots/xampp-running.png)
+
+### 🏠 DVWA Dashboard
+![DVWA Dashboard](Week-1/screenshots/dvwa-dashboard.png)
+
+### 🔐 Brute Force Module
+![Brute Force Page](Week-1/screenshots/dvwa-bruteforce-page.png)
+
+### 💉 SQL Injection Module
+![SQL Injection Page](Week-1/screenshots/dvwa-sql-injection-page.png)
+
+### ⚡ XSS Module
+![XSS Reflected Page](Week-1/screenshots/dvwa-xss-reflected-page.png)
 
 ---
 
-# 🔹 Week 2 – Target Scanning Module  
+# 🤖 WEEK 2 – TARGET SCANNING MODULE  
 
-## 🔸 Objective  
+## 🎯 Objective  
 
-The goal of Week 2 was to create a Python scanner that automatically finds:
+Create a Python scanner that automatically detects:
 
-- Forms  
-- Input fields  
-- Form actions  
-- HTTP methods  
-
-This information will be used later for automated testing.
+- 📝 Forms  
+- ⌨️ Input fields  
+- 🔁 HTTP methods  
+- 🎯 Form actions  
 
 ---
 
-## 🔸 Technologies Used  
+## 🧠 scanner.py Overview  
 
-- Python  
-- Requests Library  
-- BeautifulSoup  
-- DVWA  
-- XAMPP  
-
----
-
-## 🔸 About scanner.py  
-
-I created a Python script called `scanner.py`.
-
-This script:
+The `scanner.py` script:
 
 - Starts from DVWA homepage  
-- Sends request to the website  
-- Reads the HTML content  
-- Finds all `<form>` elements  
-- Extracts:
-  - Form action  
-  - Method (GET/POST)  
-  - Input names  
-  - Input types  
-- Saves the results into files  
+- Sends HTTP requests  
+- Parses HTML using BeautifulSoup  
+- Detects `<form>` elements  
+- Extracts input names and types  
+- Saves structured results  
 
-The scanner does not attack the website.  
-It only collects useful information.
+⚠️ It does NOT attack the website — it only collects metadata.
 
 ---
 
-## 🔸 How the Scanner Works  
+## 🔄 How It Works  
 
-1. Starts from `http://localhost/dvwa/`  
-2. Sends HTTP request  
-3. Parses HTML using BeautifulSoup  
-4. Extracts forms and inputs  
-5. Saves results in output files  
-
----
-
-## 🔸 Output Files  
-
-### 📄 output.json  
-Contains structured data:
-- Page URL  
-- Form action  
-- Method  
-- Input names and types  
-
-![Output JSON](Week2/output_json.png)
+1. Load `http://localhost/dvwa/`  
+2. Send request  
+3. Parse HTML  
+4. Extract forms & inputs  
+5. Save results  
 
 ---
 
-### 📄 output.txt  
-Readable scan results  
+## 📄 Output Files  
 
-![Output TXT](Week2/output_txt.png)
+### 📊 output.json
+Stores structured scan data.
+
+![Output JSON](Week-2/screenshots/output_json.png)
 
 ---
 
-## 🔸 Scan Results  
+### 📄 output.txt
+Readable scan results:
 
-The scanner found the DVWA login form and extracted:
-
-- username  
-- password  
-- user_token  
-- submit button  
-
-Only the login page was scanned because internal pages need authentication.
+```
+=== Discovered URLs ===
+=== Forms & Input Fields ===
+{'page': 'http://localhost/dvwa/
+', 'action': 'login.php', 'method': 'post', 'inputs': [...]}
+```
 
 ---
 
 ## 📸 Week 2 Screenshots  
 
-![Scanner Run](Week2/scanner_run.png)  
-![Python Version](Week2/py_version.png)  
+### ▶ Scanner Execution
+![Scanner Run](Week-2/screenshots/scanner_run.png)
+
+### 🐍 Python Version
+![Python Version](Week-2/screenshots/py_version.png)
 
 ---
 
-## 🔸 Limitations  
+# ⚠️ Limitations  
 
-- Scanner does not login yet  
-- Internal pages cannot be scanned  
-- Session handling will be added later  
+- Scanner does not handle login session  
+- Internal pages cannot be scanned yet  
+- Advanced session handling will be added later  
 
 ---
 
-# ✅ Milestone 1 Summary  
+# ✅ MILESTONE 1 COMPLETED  
 
-✔ Local testing environment set up  
-✔ DVWA configured successfully  
-✔ Vulnerability modules explored  
-✔ Python scanner developed  
-✔ Forms and input fields extracted  
-✔ Structured output files generated  
+✔ Local testing environment configured  
+✔ DVWA successfully deployed  
+✔ Manual SQL injection tested  
+✔ Python scanning module implemented  
+✔ Forms & input fields extracted  
+✔ Structured outputs generated  
 
-Milestone 1 builds the base for developing a complete web security testing tool.
+---
+
+<div align="center">
+
+## 🚀 Foundation Built for Advanced Web Security Automation 🚀
+
+</div>
